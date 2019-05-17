@@ -168,11 +168,56 @@
             </footer>
         </div>
 
-        <!-- modal that displays the results with the name and the picture of the closest match-->
+        <!-- insert code for modal -->
 
         <script type="text/javascript">
+
+        //On click for submit button
+        $("#submit").on("click", function(event) {
+        event.preventDefautl();
+
+        //form validation
+        function validateForm() {
+            var isValid = true;
+            $(".form-control").each(function() {
+                if ($(this).val() === "") 
+                    isValid = false;   
+            });
+            return isValid;
+        }
+
+        //Create an object for the user's answers
+        if (validateForm() == true) {
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+                ]
+            }
+        }
+
+        //AJAX post for the friends API data
+        $.post("/api/friends", userData, function (data) {
+
+            //display name and photo of most compatible match
+            //===============================================
+
+            //===============================================
+            
+        })
+    });
+    
+    </script>
         
-        </script>
-        
-    </body>
+  </body>
 </html>
