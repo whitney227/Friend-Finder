@@ -193,7 +193,25 @@
 
 
         <script type="text/javascript">
-
+        //Form CSS
+        var config ={
+            '.form-control': {},
+            '.form-control-deselect': {
+                allow_single_deselect: true
+            },
+            '.form-control-no-single': {
+                disable_search_threshold: 10
+            },
+            '.form-control-no-results': {
+                no_results_text: 'Opps, no match found!'
+            },
+            '.form-control-width': {
+                width: 95%
+            }
+        }
+        for (var selector in config) {
+            $(selector).form(config[selector]);
+        }
         //On click for submit button
         $("#submit").on("click", function(event) {
         event.preventDefautl();
