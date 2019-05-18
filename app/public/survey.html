@@ -243,18 +243,19 @@
                     $("#q9").val(),
                     $("#q10").val(),
                 ]
-            }
+            };
+
+            //AJAX post for the friends API data
+            $.post("/api/friends", userData, function (data) {
+                $("#match-name").text(data.name);
+                $("#math-img").attr("src", data.photo);
+    
+                $("#match-modal").modal("toggle");
+                
+            });
+        } else {
+            alert("Please fill out all fields before submitting!");
         }
-
-        //AJAX post for the friends API data
-        $.post("/api/friends", userData, function (data) {
-
-            //display name and photo of most compatible match
-            //===============================================
-
-            //===============================================
-            
-        })
     });
     
     </script>
