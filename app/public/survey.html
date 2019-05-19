@@ -233,8 +233,8 @@
         //Create an object for the user's answers
         if (validateForm() == true) {
             var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
                 scores: [
                     $("#q1").val(),
                     $("#q2").val(),
