@@ -22,6 +22,11 @@ var friends = [
         photo:"https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiH2q-E3KbiAhUHjlkKHUCZDtIQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBart_Simpson&psig=AOvVaw3WXd_gyAPx6SGLufb8MloP&ust=1558325215359430",
         scores:[5, 5, 5, 1, 3, 1, 2, 5, 5, 5]
     }
+    {
+        name:"Doogie Howser",
+        photo:"https://m.media-amazon.com/images/M/MV5BNzk0ODYzNjkxNV5BMl5BanBnXkFtZTgwNDY3MTY1MTE@._V1_SY1000_CR0,0,1180,1000_AL_.jpg",
+        scores:[5, 4, 3, 2, 3, 4, 4, 2, 2, 4]
+    }
 ];
 
 module.exports = friends;
