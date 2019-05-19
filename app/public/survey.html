@@ -24,9 +24,9 @@
                 <strong>About You</strong>
             </h3>
             <h4>Full Name</h4>
-            <input type="text" id="name" class="form-control" required>
+            <input type="text" name="" id="name" class="form-control" required>
             <h4>Link to Photo</h4>
-            <input type="text" id="photo" class="form-control" required>
+            <input type="text" name="" id="photo" class="form-control" required>
            
             <br>
 
@@ -223,15 +223,21 @@
         //form validation
         function validateForm() {
             var isValid = true;
-            $(".chosen-select").each(function() {
+            $(".form-control").each(function() {
                 if ($(this).val() === "") 
                     isValid = false;   
+            });
+
+            $(".chosen-select").each(function(){
+                if ($(this).val() ==="") {
+                    isValid = false;
+                }
             });
             return isValid;
         }
 
         //Create an object for the user's answers
-        if (validateForm() == true) {
+        if (validateForm()) {
             var userData = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
@@ -248,9 +254,10 @@
                     $("#q10").val(),
                 ]
             };
+            var currentURL = window.location.origin;
 
             //AJAX post for the friends API data
-            $.post("/api/friends", userData, function (data) {
+            $.post(currentURL + "/api/friends", userData, function (data) {
                 $("#match-name").text(data.name);
                 $("#math-img").attr("src", data.photo);
     

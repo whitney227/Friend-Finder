@@ -1,9 +1,15 @@
-//Home Route
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-});
+//Dependency
+var path = require('path');
 
-//Survey Route
-app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-})
+module.exports = function(app){
+    
+    //Survey Route
+    app.get("/survey", function (req, res) {
+        res.sendFile(path.join(__dirname + "/../public/survey.html"));
+    });
+
+    //Home Route
+    app.use(function(req, res) {
+        res.sendFile(path.join(__dirname + "/../public/home.html"));
+    });
+}
