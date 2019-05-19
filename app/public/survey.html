@@ -167,7 +167,7 @@
             <hr>
             <footer class="footer">
                 <p>
-                    <a href="/api/friends">API Friends List</a> | <a href="">GitHub Repository</a>
+                    <a href="/api/friends">API Friends List</a>
                 </p>
             </footer>
         </div>
@@ -260,15 +260,14 @@
 
             //AJAX post the data to the friends API
             $.post(currentURL + "/api/friends", userData, function (data) {
-                $("#match-name").text(data.name);
-                $("#math-img").attr("src", data.photo);
-    
                 $("#match-modal").modal("toggle");
-                
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.photo);    
             });
         } else {
             alert("Please fill out all fields before submitting!");
         }
+        return false;
     });
     
     </script>
