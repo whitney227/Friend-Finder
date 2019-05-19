@@ -217,46 +217,47 @@
             $(selector).chosen(config[selector]);
         }
         //On click for submit button
-        $("#submit").on("click", function(event) {
-        event.preventDefautl();
+        $("#submit").on("click", function() {
+      
+            //form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function() {
+                    if ($(this).val() === "") 
+                        isValid = false;
+                    }   
+                });
 
-        //form validation
-        function validateForm() {
-            var isValid = true;
-            $(".form-control").each(function() {
-                if ($(this).val() === "") 
-                    isValid = false;   
-            });
+                $(".chosen-select").each(function() {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
 
-            $(".chosen-select").each(function(){
-                if ($(this).val() ==="") {
-                    isValid = false;
-                }
-            });
-            return isValid;
-        }
-
-        //Create an object for the user's answers
-        if (validateForm()) {
-            var userData = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val(),
-                ]
+            //Create an object for the user's answers once all the fields are filled
+            if (validateForm()) {
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                    ]
             };
+            //Grab the URL of the website
             var currentURL = window.location.origin;
 
-            //AJAX post for the friends API data
+            //AJAX post the data to the friends API
             $.post(currentURL + "/api/friends", userData, function (data) {
                 $("#match-name").text(data.name);
                 $("#math-img").attr("src", data.photo);
