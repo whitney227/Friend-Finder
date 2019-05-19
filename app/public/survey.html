@@ -210,12 +210,13 @@
                 no_results_text: 'Opps, nothing found!'
             },
             '.chosen-select-width': {
-                width: 95%
+                width: "95%"
             }
-        }
+        };
         for (var selector in config) {
             $(selector).chosen(config[selector]);
         }
+
         //On click for submit button
         $("#submit").on("click", function() {
       
@@ -223,7 +224,7 @@
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function() {
-                    if ($(this).val() === "") 
+                    if ($(this).val() === "") {
                         isValid = false;
                     }   
                 });
