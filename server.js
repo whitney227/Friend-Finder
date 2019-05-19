@@ -10,6 +10,16 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//Routes
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join__dirname, "home.html")
+});
+
+app.get("/survey", function(req, rest) {
+  res.sendFile(path.join(__dirname, "survey.html"))
+});
+
 //start the server to begin listening
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

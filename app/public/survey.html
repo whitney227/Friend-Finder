@@ -11,7 +11,9 @@
        <!-- jQuery and Bootstrap JS -->
        <script src="https://code.jquery.com/jquery.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-       
+       <!-- Chosen -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     </head>
     <body>
         <br>
@@ -28,133 +30,135 @@
            
             <br>
 
-            <!-- form for questions -->
-            <form>
-                <div class="form-group">
+            <h3>
+                <strong>Question 1</strong>
+            </h3>
+            <h4>Outdoor activities are more enjoyable than indoor activities.</h4>
+            <select class="chosen-select" id="q1">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
+           
+            <h3>
+                <strong>Question 2</strong>
+            </h3>
+            <h4>You get annoyed when someone takes out their phone at dinner.</h4>
+            <select class="chosen-select" id="q2">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 1</strong>
-                    </h3>
-                    <h4>Outdoor activities are more enjoyable than indoor activities.</h4>
-                    <select class="form-control" id="q1">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
-                    
-                    <h3>
-                        <strong>Question 2</strong>
-                    </h3>
-                    <h4>You get annoyed when someone takes out their phone at dinner.</h4>
-                    <select class="form-control" id="q2">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 3</strong>
+            </h3>
+            <h4>You are interested in politics.</h4>
+            <select class="chosen-select" id="q3">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 3</strong>
-                    </h3>
-                    <h4>You are interested in politics.</h4>
-                    <select class="form-control" id="q3">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 4</strong>
+            </h3>
+            <h4>Texting is your preferred form of communication.</h4>
+            <select class="chosen-select" id="q4">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 4</strong>
-                    </h3>
-                    <h4>Texting is your preferred form of communication.</h4>
-                    <select class="form-control" id="q4">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 5</strong>
+            </h3>
+            <h4>Group exercise is less tortuous than working out alone.</h4>
+            <select class="chosen-select" id="q5">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 5</strong>
-                    </h3>
-                    <h4>Group exercise is less tortuous than working out alone.</h4>
-                    <select class="form-control" id="q5">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 6</strong>
+            </h3>
+            <h4>Eating alone at a restaurant makes you uncomfortable.</h4>
+            <select class="chosen-select" id="q6">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 6</strong>
-                    </h3>
-                    <h4>Eating alone at a restaurant makes you uncomfortable.</h4>
-                    <select class="form-control" id="q6">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 7</strong>
+            </h3>
+            <h4>At a party, you talk to a lot of different people.</h4>
+            <select class="chosen-select" id="q7">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 7</strong>
-                    </h3>
-                    <h4>At a party, you talk to a lot of different people.</h4>
-                    <select class="form-control" id="q7">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
+            <h3>
+                <strong>Question 8</strong>
+            </h3>
+            <h4>You can be trusted to keep a secret.</h4>
+            <select class="chosen-select" id="q8">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
+            <h3>
+                <strong>Question 9</strong>
+            </h3>
+            <h4>Entertaining guests is stressful.</h4>
+            <select class="chosen-select" id="q9">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
 
-                    <h3>
-                        <strong>Question 8</strong>
-                    </h3>
-                    <h4>You can be trusted to keep a secret.</h4>
-                    <select class="form-control" id="q8">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
-
-                    <h3>
-                        <strong>Question 9</strong>
-                    </h3>
-                    <h4>Entertaining guests is stressful.</h4>
-                    <select class="form-control" id="q9">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
-
-                    <h3>
-                        <strong>Question 10</strong>
-                    </h3>
-                    <h4>A written thank you should be sent when receiving a gift.</h4>
-                    <select class="form-control" id="q10">
-                    <option>Strongly Agree</option>
-                    <option>Agree</option>
-                    <option>Undecided</option>
-                    <option>Disagree</option>
-                    <option>Strongly Disagree</option>
-                    </select>
-
-                </div>
-            </form>
-
+            <h3>
+                <strong>Question 10</strong>
+            </h3>
+            <h4>A written thank you should be sent when receiving a gift.</h4>
+            <select class="chosen-select" id="q10">
+            <option value></option>
+            <option value="1">Strongly Agree</option>
+            <option value="2">Agree</option>
+            <option value="3">Undecided</option>
+            <option value="4">Disagree</option>
+            <option value="5">Strongly Disagree</option>
+            </select>
+            <br>
             <br>
             <!-- submit button -->
             <div class="button" style="font-family: 'Montserrat', sans-serif;">
@@ -182,7 +186,7 @@
                     <div class="modal-body">
                         <!-- display match name and img from survey results -->
                         <h2 id="match-name"></h2>
-                        <img id="match-img" src="">
+                        <img id="match-img" src="https://via.placeholder.com/400x400" alt="Placeholder if no image for user">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -195,22 +199,22 @@
         <script type="text/javascript">
         //Form CSS
         var config ={
-            '.form-control': {},
-            '.form-control-deselect': {
+            '.chosen-select': {},
+            '.chosen-select-deselect': {
                 allow_single_deselect: true
             },
-            '.form-control-no-single': {
+            '.chosen-select-no-single': {
                 disable_search_threshold: 10
             },
-            '.form-control-no-results': {
-                no_results_text: 'Opps, no match found!'
+            '.chosen-select-no-results': {
+                no_results_text: 'Opps, nothing found!'
             },
-            '.form-control-width': {
+            '.chosen-select-width': {
                 width: 95%
             }
         }
         for (var selector in config) {
-            $(selector).form(config[selector]);
+            $(selector).chosen(config[selector]);
         }
         //On click for submit button
         $("#submit").on("click", function(event) {
@@ -219,7 +223,7 @@
         //form validation
         function validateForm() {
             var isValid = true;
-            $(".form-control").each(function() {
+            $(".chosen-select").each(function() {
                 if ($(this).val() === "") 
                     isValid = false;   
             });
