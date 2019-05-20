@@ -267,7 +267,7 @@
             $.post(currentURL + "/api/friends", userData, function(data) {
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);    
-                $("#resultsModal").modal("toggle");
+                $("#resultsModal").modal("show");
             });
         } else {
             alert("Please fill out all fields before submitting!");
