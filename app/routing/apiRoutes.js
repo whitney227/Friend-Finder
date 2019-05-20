@@ -2,7 +2,7 @@
 var friends = require("../data/friends.js")
 
 //Route
-module.exports = function (app) {
+module.exports = function(app) {
 
 //GET Request
 app.get("/api/friends", function (req, res) {
@@ -21,7 +21,7 @@ app.post("/api/friends", function(req, res) {
 
     //parse the user's survey POST into a number
     var userData = req.body;
-    var userScores = userData.scores;
+    
 
     //compare user data for a match
     var totalDifference = 0;
@@ -35,7 +35,7 @@ app.post("/api/friends", function(req, res) {
         //nested loop that goes through all the scores of each friend
         for (var j = 0; j < friends[i].scores[j]; j++) {
             //calculate the difference between the scores and sum them into the totalDifference
-            totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+            totalDifference += Math.abs(parseInt(friends[i].scores[j]) - parseInt(userData.scores[j]))
             
             if(totalDifference <= bestMatch.friendDifference) {
                 bestMatch.name = friends[i].name;

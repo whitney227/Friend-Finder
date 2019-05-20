@@ -189,7 +189,7 @@
                     <div class="modal-body">
                         <!-- display match name and img from survey results -->
                         <h2 id="matchName"></h2>
-                        <img id="matchImg" src="https://via.placeholder.com/400x400" alt="Placeholder if no image for user">
+                        <img id="matchImg" src="" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -224,7 +224,7 @@
         //On click for submit button
         $("#submit").on("click", function(event) {
             event.preventDefault();
-            
+
             //form validation
             function validateForm() {
                 var isValid = true;
@@ -260,10 +260,11 @@
                         $("#q10").val(),
                     ]
             };
-           var currentURL = window.location.origin;
-           
+
+            var currentURL = window.location.origin;
+
             //AJAX post the data to the friends API
-            $.post(currentURl + "/api/friends", userData, function (data) {
+            $.post(currentURL + "/api/friends", userData, function(data) {
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);    
                 $("#resultsModal").modal("toggle");
